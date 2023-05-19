@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 09:56:31 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 10:09:22 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/19 22:06:58 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+
+	// Avoid crush when null parameter is sent with a size of 0
+	if (!dstsize)
+		return (src_len);
+
 	if (dstsize <= dst_len)
 		return (src_len + dstsize);
 	ft_strlcpy(dst + dst_len, src, dstsize - dst_len);
