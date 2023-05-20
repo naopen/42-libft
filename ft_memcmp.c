@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:09:46 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/19 20:27:57 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/20 15:14:22 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
+	n++;
 	while (--n)
 	{
 		diff = *str1 - *str2;
