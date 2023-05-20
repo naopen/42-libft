@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:31:39 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/19 17:40:32 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/20 15:11:16 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (!*needle)
 		return ((char *)haystack);
+	if (len == 0)
+		return (NULL);
 	needle_len = ft_strlen(needle);
 	i = 0;
 	while (haystack[i] && i + needle_len <= len)
