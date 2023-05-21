@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 08:41:27 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 09:58:47 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/21 16:26:58 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*dst_c;
 	unsigned char	*src_c;
-	size_t			i;
 
 	dst_c = (unsigned char *)dst;
 	src_c = (unsigned char *)src;
-	i = 0;
 	if (dst_c == NULL && src_c == NULL)
 		return (NULL);
 	if (dst_c > src_c)
@@ -35,12 +33,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dst_c[len] = src_c[len];
 	}
 	else
-	{
-		while (i < len)
-		{
-			dst_c[i] = src_c[i];
-			i++;
-		}
-	}
+		ft_memcpy(dst_c, src_c, len);
 	return (dst);
 }
