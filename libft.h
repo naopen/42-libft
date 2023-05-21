@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 08:45:48 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 16:52:47 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/21 19:19:30 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(const char *str, char ch);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+void	ft_striteri(char *str, void (*f)(unsigned int, char*));
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *str, int fd);
