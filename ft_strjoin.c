@@ -6,15 +6,15 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:21:58 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 14:29:29 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/21 15:03:10 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// mallocで新しい文字列を作成したものをstrcatで繋げる
-// *s1 と *s2 を連結した新しい文字列を返します。
-// ただし、割り当てに失敗した場合はNULLを返します。
+// mallocで新しい文字列を作成したものをstrlcatで繋ぐ
+// *s1 と *s2 を連結した新しい文字列を返す
+// ただし、割り当てに失敗した場合はNULLを返す
 
 // 要件定義
 // - s1の末尾にs2を連結する
@@ -24,26 +24,18 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*join;
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	char	*new_str;
+	size_t	s1_len;
+	size_t	s2_len;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	join = (char *)malloc(sizeof(char) * (len + 1));
-	if (!join)
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	new_str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!new_str)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		join[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-		join[i++] = s2[j++];
-	join[i] = '\0';
-	return (join);
+	ft_strlcpy(new_str, s1, s1_len + 1);
+	ft_strlcat(new_str, s2, s1_len + s2_len + 1);
+	return (new_str);
 }
