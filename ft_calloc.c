@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:48:26 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/20 14:11:47 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/21 17:20:33 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (!count || !size)
+	{
+		count = 1;
+		size = 1;
+	}
+	if (count > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
