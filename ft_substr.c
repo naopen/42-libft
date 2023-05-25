@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:15:41 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 21:38:53 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/05/26 03:29:32 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 // start>=ft_strlen(s)の場合は空の文字列を返す。
 // len == 0のときも空の文字列を返す。
 // lenが長すぎてsの終わりを超える場合は、sの最後まで抽出した文字列を返す。
+
+// (memcpyでも書けるっぽい)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
