@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 09:56:31 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/20 19:47:01 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/09 21:53:19 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (src_len);
 	if (!dst && dstsize == 0)
 		return (ft_strnlen(src, dstsize));
+	if (!dst && !src && dstsize == 0)
+		return (0);
 	if (dstsize <= dst_len)
 		return (src_len + dstsize);
 	ft_strlcpy(dst + dst_len, src, dstsize - dst_len);
