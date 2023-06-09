@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 19:15:18 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/09 20:00:59 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/09 21:51:35 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int	i;
 
 	if (!s)
+		return ;
+	if (!f)
 		return ;
 	i = 0;
 	while (s[i])
