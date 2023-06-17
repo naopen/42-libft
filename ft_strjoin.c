@@ -6,13 +6,14 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:21:58 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 12:03:43 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:58:41 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Return a new string, which is the result of the concatenation of ’s1’ and ’s2’.
+// Return a new string,
+// which is the result of the concatenation of ’s1’ and ’s2’.
 // If it fails, return NULL.
 
 // Requirements

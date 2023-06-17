@@ -6,13 +6,14 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 10:12:38 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:57:51 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:59:10 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Return a pointer to the first occurrence of the character c in the string str.
+// Return a pointer
+// to the first occurrence of the character c in the string str.
 // If the character is not found, the function returns a NULL pointer.
 // If c is '\0', the function returns a pointer to the terminator.
 
