@@ -6,7 +6,7 @@
 #    By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/19 17:01:53 by nkannan           #+#    #+#              #
-#    Updated: 2023/05/21 19:20:14 by nkannan          ###   ########.fr        #
+#    Updated: 2023/06/17 13:12:15 by nkannan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
 					ft_lstmap.c ft_lstnew.c ft_lstsize.c
 BONUS_OBJS		= $(BONUS:.c=.o)
 
-CC				= gcc
+CC				= cc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 
