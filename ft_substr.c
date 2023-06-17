@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:15:41 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/26 03:29:32 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:19:12 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (s_len - start < len)
 		len = s_len - start;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+	substr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!substr)
 		return (NULL);
 	i = 0;
@@ -43,6 +43,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr[i] = s[start + i];
 		i++;
 	}
-	substr[i] = '\0';
 	return (substr);
 }

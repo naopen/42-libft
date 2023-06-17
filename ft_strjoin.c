@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:21:58 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 18:49:08 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/09 23:39:17 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	new_str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	new_str = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
 	if (!new_str)
 		return (NULL);
 	ft_strlcpy(new_str, s1, s1_len + 1);

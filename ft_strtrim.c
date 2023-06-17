@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:13:41 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/26 03:29:22 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:18:50 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (len > i && ft_strchr(set, s1[len - 1]))
 		len--;
-	trim = (char *)malloc(sizeof(char) * (len - i + 1));
+	trim = (char *)ft_calloc(len - i + 1, sizeof(char));
 	if (!trim)
 		return (NULL);
 	j = 0;
 	while (i < len)
 		trim[j++] = s1[i++];
-	trim[j] = '\0';
 	return (trim);
 }

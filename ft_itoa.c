@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:18:21 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 16:30:31 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:25:52 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,9 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	len = ft_count_digit(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
 	if (nb == 0)
 		str[0] = '0';
 	if (nb < 0)

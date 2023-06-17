@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:31:46 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 19:21:59 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:18:14 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 
 	if (!str || !f)
 		return (NULL);
-	new_str = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1));
+	new_str = (char *)ft_calloc(ft_strlen(str) + 1, sizeof(char));
 	if (!new_str)
 		return (NULL);
 	i = 0;
@@ -38,6 +38,5 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 		new_str[i] = f(i, str[i]);
 		i++;
 	}
-	new_str[i] = '\0';
 	return (new_str);
 }

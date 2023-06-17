@@ -6,7 +6,7 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:31:10 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 15:20:24 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:25:07 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,13 +73,12 @@ static char	**ft_split_helper(char const *str, char ch, char **split,
 	{
 		while (str[j] == ch)
 			j++;
-		split[i] = (char *)malloc(sizeof(char) * (ft_word_len(str, ch, j) + 1));
+		split[i] = (char *)ft_calloc(ft_word_len(str, ch, j) + 1, sizeof(char));
 		if (!split[i])
 			return (ft_free(split, i));
 		k = 0;
 		while (str[j] != ch && str[j])
 			split[i][k++] = str[j++];
-		split[i][k] = '\0';
 		i++;
 	}
 	split[i] = NULL;
@@ -94,7 +93,7 @@ char	**ft_split(char const *str, char ch)
 	if (!str)
 		return (NULL);
 	count = ft_count_words(str, ch);
-	split = (char **)malloc(sizeof(char *) * (count + 1));
+	split = (char **)ft_calloc(count + 1, sizeof(char *));
 	if (!split)
 		return (NULL);
 	return (ft_split_helper(str, ch, split, count));
