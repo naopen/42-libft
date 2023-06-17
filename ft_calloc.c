@@ -6,22 +6,23 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:48:26 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:45:16 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:55:50 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// # Explanation
 // Allocate a block of size bytes from the heap memory,
-// and the allocated block is zero-filled.
+// and fill it with zeros.
+// Returns a pointer to the allocated memory.
+
 // If count or size is 0,
-// calloc returns NULL or a unique pointer value
-// that can be successfully passed to free later.
+// returns NULL or a unique pointer value
+// that can later be successfully passed to free().
 
 // ——About malloc——
-// Integer overflow is not detected.
-// In such cases, a memory block of incorrect size will be allocated.
+// If it overflows, is not detected,
+// a memory block of incorrect size will be allocated.
 
 void	*ft_calloc(size_t count, size_t size)
 {

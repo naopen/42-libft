@@ -6,23 +6,20 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 08:38:20 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 12:30:46 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:37:20 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Convert a "number" consisting of a single '+' or '-' sign
-// followed by one or more digits (0 to 9) into an int type.
-// Starting from the left and excluding any preceding whitespace,
-// continuously convert characters
-// until a non-digit character (including null) is encountered.
+// Convert a string to an integer.
+// If the string is not a valid integer, return 0.
+// Integers can start with an optional '+' or '-' sign.
+// Integers can contain digits only.
+// Convert the string until the first non-digit character.
+
 // ——About strtol——
-// Take caution regarding the behavior
-// when the converted value exceeds the range of a long type.
-// (If no overflow occurs, the strtol function returns the converted value.
-// If an overflow occurs in the positive direction, LONG_MAX is returned;
-// if an overflow occurs in the negative direction, LONG_MIN is returned.)
+// If it overflows, LONG_MAX or LONG_MIN is returned.
 
 static int	ft_isspace(char c)
 {

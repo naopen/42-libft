@@ -6,15 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:48:03 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:44:49 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:37:45 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Fill the first n bytes of the region
-// starting from the byte sequence *s with '\0'.
-// Equivalent to memset with the second argument being '\0'.
+// Fill the first n bytes of the memory area pointed to by s with zeros.
 
 void	ft_bzero(void *s, size_t n)
 {
