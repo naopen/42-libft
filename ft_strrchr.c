@@ -6,15 +6,14 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:29:42 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 12:32:05 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:21:36 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// strの中に「最後に」文字cがあれば、その現れた位置へのポインタを返す
-// もし見つからなければNULLを返す
-// c = '\0'の場合は、strの最後の'\0'へのポインタを返す
+// Return a pointer to the last occurrence of the character c in the string str.
+// If the character is not found, return NULL.
 
 char	*ft_strrchr(const char *str, int c)
 {

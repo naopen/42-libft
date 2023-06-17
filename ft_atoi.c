@@ -6,18 +6,23 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 08:38:20 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/20 22:34:43 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:30:46 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// - か + の符号1つとその直後に続く半角数字（ 0 から 9 ）で構成された「数字」をint型にして返す。
-// 数字の前にある空白を除いて、左から順に数字以外（ヌル文字含む）が出現するまで変換し続ける。
-// ——以下strtolについて——
-// 変換時の数値がlong型をオーバーフローする際の挙動に注意すること。
-// (オーバーフローが起きなかった場合、 strtol関数は 変換された値を返す。
-// 正の方向にオーバーフローした場合には LONG_MAX が返り、 負の方向にオーバーフローした場合には LONG_MIN が返る。)
+// Convert a "number" consisting of a single '+' or '-' sign
+// followed by one or more digits (0 to 9) into an int type.
+// Starting from the left and excluding any preceding whitespace,
+// continuously convert characters
+// until a non-digit character (including null) is encountered.
+// ——About strtol——
+// Take caution regarding the behavior
+// when the converted value exceeds the range of a long type.
+// (If no overflow occurs, the strtol function returns the converted value.
+// If an overflow occurs in the positive direction, LONG_MAX is returned;
+// if an overflow occurs in the negative direction, LONG_MIN is returned.)
 
 static int	ft_isspace(char c)
 {
@@ -27,7 +32,7 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-// numがオーバーフローするかどうかを判定する関数
+// Function to determine if 'num' will overflow
 static int	ft_is_overflow(unsigned long long num, int sign, unsigned int digit)
 {
 	if (num > LONG_MAX / 10 || (num == LONG_MAX / 10 && digit > LONG_MAX % 10))

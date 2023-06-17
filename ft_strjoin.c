@@ -6,24 +6,24 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:21:58 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/09 23:39:17 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:03:43 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// mallocで新しい文字列を作成したものをstrlcatで繋ぐ
-// *s1 と *s2 を連結した新しい文字列を返す
-// ただし、割り当てに失敗した場合はNULLを返す
+// Return a new string, which is the result of the concatenation of ’s1’ and ’s2’.
+// If it fails, return NULL.
 
-// 要件定義
-// - s1の末尾にs2を連結する
-// - s1末尾のヌル文字を消すか無視して連結しなくてはいけない
-// - s1の範囲外へアクセスするような形で連結した場合と、s1とs2が重なっていた場合の動作は「未定義」なので、考慮しなくてよい
-// - 戻り値はs1（連結後の値）
+// Requirements
+// - Concatenate s2 to the end of s1.
+// - The null-terminator of s1 will be overwritten by the first character of s2.
+// - It is not necessary to consider the case when s1 and s2 overlap.
+// - Return a pointer to the new string, s1.
 
-// ft_strlenはヌル文字を含まない文字列の長さを返す
-// そのため、new_strのサイズはs1_len + s2_len + 1である
+// Size of the new string
+// - The size of the new string is strlen(s1) + strlen(s2) + 1.
+// - The +1 is for the null-terminator.
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

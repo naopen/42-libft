@@ -6,14 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 13:11:10 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/17 13:12:47 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:46:42 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// もしcが数字 (ASCIIコードで48から57まで) なら1を返す
-// そうでなければ0を返す
+// If c is a digit, return 1. Otherwise, return 0.
 
 int	ft_isdigit(int c)
 {

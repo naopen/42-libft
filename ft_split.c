@@ -6,18 +6,18 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:31:10 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:25:07 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:56:29 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// sを区切り文字cで分けた各文字列をmallocで割り当て、返す。
-// 割り当てが失敗した場合はNULLを返す。
-// split("AAbbBBbbCC", "b")の場合{AA, BB, CC, NULL}を返す
+// Returns an array of strings obtained by splitting ’s’ using the
+// character ’c’ as a delimiter. The array must be ended by a NULL.
+// If split("AAbbBBbbCC", "b") -> {"AA", "BB", "CC", NULL}
 
-// # 注意点
-// 分割後の文字列領域をmallocしている時にNULLが返った時は、それまで確保していた領域を全てfreeする。
+// If malloc returns NULL when allocating memory for the split string area,
+// free all previously allocated memory.
 
 static size_t	ft_count_words(char const *s, char c)
 {

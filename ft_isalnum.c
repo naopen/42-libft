@@ -6,16 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 13:13:49 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/17 13:14:14 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:46:06 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// もしcが数字 (ASCIIコードで48から57まで) または
-// 小文字のアルファベット (ASCIIコードで97から122まで) または
-// 大文字のアルファベット (ASCIIコードで65から90まで) なら1を返す
-// そうでなければ0を返す
+// if c is a letter or a number, return 1. Otherwise, return 0.
 
 int	ft_isalnum(int c)
 {

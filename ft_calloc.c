@@ -6,20 +6,22 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 09:48:26 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 17:20:33 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:45:16 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// # 説明
-// ヒープメモリから size バイトのブロックを count 個割り当てる。
-// 確保されたブロックは0埋めされます。
-// countまたはsizeが0の場合、callocはNULL、または後でfreeに正常に渡すことができる一意のポインター値を返します。
+// # Explanation
+// Allocate a block of size bytes from the heap memory,
+// and the allocated block is zero-filled.
+// If count or size is 0,
+// calloc returns NULL or a unique pointer value
+// that can be successfully passed to free later.
 
-// ——以下mallocについて——
-// 整数のオーバーフローは検出されない。
-// その場合は、誤ったサイズのメモリブロックが割り当てられる。
+// ——About malloc——
+// Integer overflow is not detected.
+// In such cases, a memory block of incorrect size will be allocated.
 
 void	*ft_calloc(size_t count, size_t size)
 {

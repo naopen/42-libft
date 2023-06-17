@@ -6,16 +6,14 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:18:21 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:25:52 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:47:33 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 整数nを文字列に変換
-// nが負の場合は、先頭に'-'を付ける
-// nが0の場合は、"0"を返す
-// nがINT_MINの場合は、"-2147483648"を返す
+// Convert an integer to a string.
+// If the allocation fails, the function returns NULL.
 
 static int	ft_count_digit(int n)
 {

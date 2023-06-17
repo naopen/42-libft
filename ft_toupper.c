@@ -6,14 +6,14 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 10:10:07 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 10:10:25 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:28:57 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// cが小文字なら大文字に変換する
-// cが小文字でない場合は、cをそのまま返す
+// Convert lowercase letter to uppercase.
+// If c is not a lowercase letter, return c.
 
 int	ft_toupper(int c)
 {

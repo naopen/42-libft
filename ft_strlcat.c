@@ -6,23 +6,17 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 09:56:31 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/09 21:53:19 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:08:37 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// メモリ領域*srcからメモリ領域*dstに、
-// 最大でdstsize - strlen(*dst) - 1バイトだけ文字列をコピーする
-// dstsize-strlen(*dst) - 1 バイトコピーする前に
-// ヌル文字 ('\0') が見つかると、そこでコピーを中止する。
+// Copy src to dst. If dstsize is less than or equal to the length of dst,
+// the function returns dstsize + the length of src.
 
-// 返り値は、コピーしようとした文字列の長さを返す。
-// つまり、dstsizeが0であっても、srcの長さを返す。
-// またこの際にstrlenを使うと、crashしてしまう。
-// これは、strlenは、ヌル文字が見つかるまでの長さを返すためである。
-// 一方で、strnlenは、dstsizeのサイズ、つまりここでは0文字分の長さを返すため、
-// ヌル文字が見つからない場合にメモリ領域を破壊してしまうことを防ぐことができる
+// strnlen() uses to find the length of the string pointed to by s, excluding
+// the terminating null byte ('\0'), but at most maxlen.
 
 static size_t	ft_strnlen(const char *s, size_t maxlen)
 {

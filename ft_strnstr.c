@@ -6,18 +6,17 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:31:39 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/20 15:11:16 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:21:00 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 検索バイト数lenより短い文字列haystackの中で、
-// ヌル文字 ('\0') 終端の文字列needleが最初に現れる位置へのポインタを返す
-// needleが空文字列の場合は、haystackを返し、
-// needleがhaystackに現れない場合はNULLを返す
-// '\0' の後に現れる文字は検索されない
-// len=0の場合は、0を返す
+// Returns a pointer to the first occurrence of the string ’needle’ in the
+// string ’haystack’. The terminating null bytes (’\0’) are not compared.
+// If ’needle’ is an empty string, ’haystack’ is returned;
+// if ’needle’ occurs nowhere in ’haystack’, NULL is returned.
+// If len = 0, return NULL.
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

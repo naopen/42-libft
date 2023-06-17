@@ -6,16 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 13:22:46 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 10:06:59 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:14:47 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// strの指す文字列のバイト数を返す
-// 例えば、"42tokyo"なら7を返す
-// このとき、'\0'は含まない
-// strがNULLの場合はSEGFAULTを起こす
+// Return the length of the string.
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,15 +6,18 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:09:46 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/20 15:14:22 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:49:12 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// メモリ領域*s1と*s2の最初のnバイトを比較する
-// s1 > s2なら正の値を、s1 < s2なら負の値を、s1 = s2なら0を返す
-// 途中にヌル文字 ('\0') があっても、比較を続ける
+// Compare byte string s1 against byte string s2.
+// Both strings are assumed to be n bytes long.
+// Return zero if the two strings are identical,
+// otherwise return the difference between the first two differing bytes
+// (treated as unsigned char values, so that `\200' is greater than `\0',
+// for example).
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,16 +6,15 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 09:49:43 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 09:58:46 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:14:28 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// メモリ領域*srcからメモリ領域*dstに、最大でdstsize - 1バイトだけ文字列をコピーする
-// dstsize-1 バイトコピーする前にヌル文字 ('\0') が見つかると、
-// そこでコピーを中止する
-// コピー後には必ずヌル文字で終端する
+// Copy src to dst. If dstsize is 0, return the length of src.
+// If a null character is found in src,
+// stop copying and return the length of src.
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,14 +6,16 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 12:37:15 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 12:38:01 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:17:04 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// s1とs2の最大nバイトを比較する
-// s1 > s2なら正の値を、s1 < s2なら負の値を、s1 = s2なら0を返す
+// Compare the first n bytes of s1 and s2.
+// If s1 > s2, return a positive number.
+// If s1 < s2, return a negative number.
+// If s1 == s2, return 0.
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

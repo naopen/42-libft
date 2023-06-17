@@ -6,13 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 15:27:01 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 15:52:27 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:52:54 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 指定されたファイルディスクリプタfdに対して文字列sを出力
+// Outputs the string ’s’ to the given file descriptor.
 
 void	ft_putstr_fd(char *str, int fd)
 {

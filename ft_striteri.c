@@ -6,14 +6,15 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 19:15:18 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/09 21:58:44 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:59:12 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 引数として渡された文字列 *s の各文字に関数 f を適用し、そのインデックスを第1引数として渡す。
-// 各文字はポインタとしてfに渡され、必要に応じて修正される。
+// Applies the function f to each character of the string passed
+// as argument, and passing its index as first argument.
+// Each character is passed by address to f to be modified if necessary.
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

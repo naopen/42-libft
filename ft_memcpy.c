@@ -6,18 +6,16 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:46:08 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 09:58:43 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:50:03 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// コピー先のメモリ領域 (*dst) に、
-// コピー元のメモリ領域 (*src) の先頭から (n) バイト分をコピーする
-// 途中にヌル文字 ('\0') があってもコピーを止めない
-// コピーが終わったら、コピー先のメモリブロックの先頭アドレスを返す
-// コピー先とコピー元のメモリブロックが重なっている場合の動作は未定義
-// srcがconstなのは、コピー元のメモリブロックを変更しないことを保証するため
+// Copy n bytes from memory area src to memory area dst.
+// If dst and src overlap, behavior is undefined.
+// Applications in which dst and src might overlap should
+// use ft_memmove instead.
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

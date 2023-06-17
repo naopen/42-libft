@@ -6,17 +6,16 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 08:41:27 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 16:26:58 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:50:28 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// メモリ領域*srcの先頭nバイトをメモリ領域*dstにコピーする
-// また、srcを単なるメモリブロックとして扱うため、
-// 途中にヌル文字 ('\0') があってもコピーを続行する
-// dstとsrcが重なっている場合でも、memmove()は正しく動作する
-// (memcpy() では動作が未定義となる)
+// Copies len bytes from string src to string dst.
+// The two strings may overlap;
+// the copy is always done in a non-destructive manner.
+// Returns the original value of dst.
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,20 +6,20 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 12:15:41 by nkannan           #+#    #+#             */
-/*   Updated: 2023/06/17 11:19:12 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 12:28:12 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 文字列 *s の start 文字目から len 文字分を新たにmallocで確保して作ったchar*に入れてそれを返す。
-// ただし、割り当てに失敗した場合はNULLを返します。
+// Return a substring from the string ’s’.
+// The substring begins at index ’start’ and is of maximum size ’len’.
 
-// start>=ft_strlen(s)の場合は空の文字列を返す。
-// len == 0のときも空の文字列を返す。
-// lenが長すぎてsの終わりを超える場合は、sの最後まで抽出した文字列を返す。
+// If start is beyond the end of s, return an empty string.
+// If len = 0, return an empty string.
+// If len is too large, the substring is truncated to its maximum length.
 
-// (memcpyでも書けるっぽい)
+// (this can use memcpy...?)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

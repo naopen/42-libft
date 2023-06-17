@@ -6,15 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 13:08:51 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/17 13:13:13 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:46:14 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// もしcが小文字のアルファベット (ASCIIコードで97から122まで) または
-// 大文字のアルファベット (ASCIIコードで65から90まで) なら1を返す
-// そうでなければ0を返す
+// If c is a letter, return 1. Otherwise, return 0.
 
 int	ft_isalpha(int c)
 {

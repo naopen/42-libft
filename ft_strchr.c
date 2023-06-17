@@ -6,15 +6,15 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 10:12:38 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/18 12:35:00 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:57:51 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// strの中に「最初に」文字cがあれば、その現れた位置へのポインタを返す
-// もし見つからなければNULLを返す
-// c = '\0'の場合は、strの最後の'\0'へのポインタを返す
+// Return a pointer to the first occurrence of the character c in the string str.
+// If the character is not found, the function returns a NULL pointer.
+// If c is '\0', the function returns a pointer to the terminator.
 
 char	*ft_strchr(const char *str, int c)
 {

@@ -6,13 +6,13 @@
 /*   By: nkannan <nkannan@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 15:49:54 by nkannan           #+#    #+#             */
-/*   Updated: 2023/05/21 15:59:20 by nkannan          ###   ########.fr       */
+/*   Updated: 2023/06/17 11:52:46 by nkannan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 指定されたファイルディスクリプタfdに対して整数nを出力
+// Outputs the integer ’n’ to the given file descriptor.
 
 void	ft_putnbr_fd(int n, int fd)
 {
